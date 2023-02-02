@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <body>
+        <input id="inputMonth" type="text" />
+        <button onclick="handleSubmit()">Submit</button>
+    <script>
+      function getmonth(month) {
+        let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        if (!months.includes(month)) {
+          throw new Error("Invalid month");
+        }
+        return month;
+      }
+
+      function handleSubmit() {
+        try {
+          let inputMonth = document.getElementById("inputMonth").value;
+          let result = getmonth(inputMonth);
+          alert("Month: " + result);
+        } catch (error) {
+          alert("Error: " + error.message);
+        }
+      }
+    </script>
+  </head>
+  
+  </body>
+</html>
+
+
+</head>
+
+</html>    
